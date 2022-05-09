@@ -1,0 +1,31 @@
+{
+  "name": "conexion-api-web",
+  "version": "1.0.0",
+  "description": "Conexion de una API REST hecha con MongoDB con una pagina web funcional.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CholGH/Conexion-API-Web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CholGH/Conexion-API-Web/issues"
+  },
+  "homepage": "https://github.com/CholGH/Conexion-API-Web#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
