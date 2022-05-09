@@ -1,13 +1,15 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-const bcrypt = require('bcrypt');
 const _connect = require('./db/_connect');
+const userRoutes = require('./routes/userRouter');
 require('dotenv').config();
 
 const port = process.env.PORT;
-const app = express();
+
 _connect();
+
+const app = express();
 
 app.set('etag', false);
 
@@ -15,7 +17,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', (req, res) => { res.send('hola mundo') });
+app.use('/account', userRoutes)
 
+app.post('/account/register')
 
-app.listen(port, () => console.log('Servidor levantado en: localhost:' + port));
+app.listen(port, () => console.log('Servidor levantado en: localhost:' + port))
