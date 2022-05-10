@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 require('dotenv').config();
 
 const connection = process.env.MONGO_CRED + '@' + process.env.MONGO_CLUSTER + '/' + process.env.MONGO_DB
